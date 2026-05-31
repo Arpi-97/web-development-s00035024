@@ -101,8 +101,8 @@ function renderBookingCard(booking, index) {
         <dialog id="booking-modal-${index}">
             <h3>Aggiungi nota per la prenotazione #${index + 1}</h3>
             <form class="note-form">
-                <label for="note-textarea">Aggiungi una nota</label>
-                <textarea id="note-textarea" name="note-textarea" cols="50" rows="9" required></textarea>
+                <label for="note-textarea-${index}">Aggiungi una nota</label>
+                <textarea id="note-textarea-${index}" name="note-textarea" cols="50" rows="9" required></textarea>
                 <section class="dialog-actions">
                     <button type="button" class="close-dialog-btn">Annulla</button>
                     <button type="submit">Conferma</button>
@@ -114,10 +114,10 @@ function renderBookingCard(booking, index) {
     // Ottenimento variabili innestate
     const acceptBtn = article.querySelector(".accept-booking-btn");
     const rejectBtn = article.querySelector(".reject-booking-btn");
-    const bookingModal = article.getElementById(`booking-modal-${index}`);
+    const bookingModal = article.querySelector(`#booking-modal-${index}`);
     const closeDialogBtn = bookingModal.querySelector(".close-dialog-btn");
     const noteForm = bookingModal.querySelector(".note-form");
-    const noteInput = noteForm.getElementById("note-textarea");
+    const noteInput = noteForm.querySelector(`#note-textarea-${index}`);
 
     // Se esistono i bottoni, allora i loro eventi sono eseguiti
     if (acceptBtn && rejectBtn) {
@@ -149,7 +149,7 @@ function renderBookingCard(booking, index) {
         allBookings[index].adminNote = notaInserita;
         sessionStorage.setItem("clientBookings", JSON.stringify(allBookings));
         alert("Nota inserita con successo. Ora sarà visibile anche al cliente con l'indicazione del rifiuto della prenotazione.");
-        bookingModal.reset();
+        noteForm.reset();
         bookingModal.close();
 
         renderAllBookings();

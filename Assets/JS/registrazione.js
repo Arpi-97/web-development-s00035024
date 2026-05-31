@@ -49,7 +49,7 @@ formRegister.addEventListener("submit", function(event) {
         successModal.showModal();
         closeModalButton.addEventListener("click", () => {
             successModal.close();
-            window.location.href = ".,/../../../index.html";  // Rimando a pagina di login dopo chiusura modale
+            window.location.href = "../../index.html";  // Rimando a pagina di login dopo chiusura modale
         });
     }
     showSuccessModal();

@@ -18,7 +18,10 @@ const demoClient = {
 };
 
 // Vengono passati i dati del cliente regisytrato dalla registrazione oppure quelle di default in base a chi si è loggato
-let loggedUser = JSON.parse(sessionStorage.getItem("loggedUser")) || demoClient;  
+let registeredUser = JSON.parse(sessionStorage.getItem("registeredUser")) || demoClient;  
+
+// Vengono passati anche i dati dell'utenza che si è attualmente loggata
+const loggedUser = JSON.parse(sessionStorage.getItem("loggedUser"));
 
 // Stampa dati utente
 username.value = loggedUser.username;
@@ -53,8 +56,8 @@ formChangePassword.addEventListener("submit", (event) => {
     }
     event.preventDefault();
     // Salva la nuova password
-    loggedUser.password = confirmPassword.value.trim();
-    sessionStorage.setItem("loggedUser", JSON.stringify(loggedUser));
+    registeredUser.password = confirmPassword.value.trim();
+    sessionStorage.setItem("registeredUser", JSON.stringify(registeredUser));
     alert("Password modificata con successo per la propria utenza. Ora si verrà reindirizzati nuovamente alla pagina di login.");
     modalConfirmPassword.close();
     window.location.href = "../../../index.html";
