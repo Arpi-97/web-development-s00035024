@@ -31,28 +31,24 @@ The project focuses on creating a Web App for a restaturant called "San Martino"
 ## Project Structure
 
 ```
-Project/
-    ├── Assets/
-    │   ├── CSS/
-    │   │   └── style.css              # CSS style used globally on all HTML files
-    │   ├── HTML/
-    │   │   ├── Cliente/
-    │   │   │   ├── cliente-dashboard.html.  # Client dashboard
-    │   │   │   └── cliente-profile.html.    # Client profile page
-    │   │   ├── Ristoratore/
-    │   │   │   └── ristorante-dashboard.html # Restaurant owner dashboard
-    │   │   └── registrazione.html  # New user registration page
-    │   ├── JS/
-    │   │   ├── Cliente/
-    │   │   │   ├── cliente-dashboard.js. # Logic for the client dashboard (weather conditions, new reservation)
-    │   │   │   └── cliente-profile.js  # Logic for the client profile (change current password)
-    │   │   ├── Ristoratore/
-    │   │   │   └── ristorante-dashboard.js  # Logic for the restaurant owner dashboard (accept or reject user reservations)
-    │   │   ├── registrazione.js  # Logic for the registration page (create new client user)
-    │   │   └── login.js   # Login logic for the index page
-    │   └── MD/
-    │       └── README.md
-    └── index.html  # User landing page (login)
+PROJECT/
+├── Assets/
+│   ├── CSS/
+│   ├── HTML/
+│   │   ├── Cliente/
+│   │   │   ├── cliente-dashboard.html   # Client dashboard
+│   │   │   └── cliente-profile.html     # Client profile page
+│   │   ├── Ristoratore/                 # Contains restaurant owner pages
+│   │   └── registrazione.html           # New user registration page
+│   └── JS/
+│       ├── Cliente/
+│       │   ├── cliente-dashboard.js     # Logic for the client dashboard (weather conditions, new reservation)
+│       │   └── cliente-profile.js       # Logic for the client profile (change current password)
+│       ├── Ristoratore/                 # Contains restaurant owner logic
+│       ├── login.js                     # Login logic for the index page
+│       └── registrazione.js             # Logic for the registration page (create new client user)
+├── index.html                           # User landing page (login)
+└── README.md                            # Project documentation
 ```
 
 ## User flow
