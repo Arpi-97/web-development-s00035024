@@ -1,0 +1,322 @@
+/* =========================================================
+   1. NORMALIZZAZIONE E BASE
+   Applicato a: TUTTI I FILE HTML
+========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background-color: #f5f5f5;
+}
+
+
+/* =========================================================
+   2. ELEMENTI COMUNI E TYPOGRAPHY
+   Applicato a: TUTTI I FILE HTML
+========================================================= */
+
+h1 {
+    margin: 0;
+    padding: 0.75rem 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: calc(100% - 2rem);
+    max-width: 420px;
+    margin: 3rem auto 6rem;
+    padding: 2rem 1.5rem;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+label {
+    margin: 0;
+    align-self: center;
+    font-size: 2rem;
+}
+
+input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+a {
+    color: #333;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+/* Override form dentro i tag dialog usati per i modali (es. in Dashboard) */
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+dialog form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+dialog form input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   3. LOGIN E REGISTRAZIONE
+   Applicato a: 
+   -  index.html, 
+   -  registrazione.html
+========================================================= */
+
+/* Sezione di supporto al form (Login e Registrazione) */
+form section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Sezione dei termini per il completamento (SOLO registrazione.html) */
+.terms-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+.terms-row input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.terms-row label {
+    margin: 0;
+    align-self: auto;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   4. LAYOUT DASHBOARD E PROFILO
+   Applicato a: 
+   -  cliente-dashboard.html, 
+   -  cliente-profile.html,
+   -  ristoratore-dashboard.html
+========================================================= */
+
+main {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto 6rem;
+}
+
+nav {
+    margin: 1.5rem 0 2rem;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+#navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-list a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contenitori Sezioni Dashboard */
+#welcome-section,
+#weather-section,
+#new-booking-section,
+#bookings-section,
+#personal-information,
+#received-booking-section {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Titoli Sezioni Dashboard */
+#welcome-section h2,
+#weather-section h2,
+#new-booking-section h2,
+#bookings-section h2,
+#received-booking-section h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
+}
+
+/* Elementi specifici Dashboard Cliente */
+#new-booking-btn {
+    margin-top: 1rem;
+}
+
+#weather-location {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#weather-status {
+    margin: 0;
+}
+
+/* Liste e Card Prenotazioni (Comune a Cliente e Ristoratore) */
+#bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top:  1rem;
+}
+
+.booking-card {
+    border-left: 8px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.booking-card.pending {
+    border-left-color: #d4a017;
+}
+
+.booking-card.confirmed {
+    border-left-color: #2e8b57;
+}
+
+.booking-card.rejected {
+    border-left-color: #c0392b;
+}
+
+.booking-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.booking-card p {
+    margin: 0.35rem 0;
+}
+
+/* Azioni Modali */
+.dialog-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+
+/* =========================================================
+   5. RESPONSIVE
+   Applicato a: Tutti i file (in base ai componenti usati)
+========================================================= */
+
+@media (max-width: 700px) {
+    main {
+        width: calc(100% - 1rem);
+        margin: 1rem auto 5rem;
+    }
+
+    #navbar-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    #welcome-section,
+    #new-booking-section,
+    #bookings-section,
+    #personal-information {
+        padding: 1rem;
+    }
+
+    #welcome-section h2,
+    #new-booking-section h2,
+    #bookings-section h2,
+    #personal-information h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .booking-card {
+        padding: 0.85rem;
+    }
+}

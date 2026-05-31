@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Medati aggiuntivi -->
+    <meta name="description" content="Pagina di login per accesso cliente o ristorante al portale Ristorante San Martino">
+    <meta name="author" content="Riccardo Padoan">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../Project/Assets/CSS/style.css">
+    <script defer src="../Project/Assets/JS/login.js"></script>
+    <title>Ristorante San Martino</title>
+</head>
+<body>
+    <main>
+        <h1>Collegati a Ristorante San Martino</h1>
+        <!-- Form di login al portale -->
+        <form id="login-form">
+            <label for="username">Username</label>
+            <br>
+            <input type="text" name="username" id="username" placeholder="Inserisci il tuo nome utente" required>
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Inserisci la tua password" required minlength="8" maxlength="16" autocomplete="current-password">
+            <br>
+            <button type="submit">Accedi</button>
+            <!-- Sezione di registrazione con credenziali di default -->
+            <section class="login-section">
+                <p>Non hai un account? Crealo subito qui: <a href="../Project/Assets/HTML/registrazione.html">creazione account</a></p>
+                <p class="default-paragraph">Credenziali di default per utente "cliente": cliente/Zw#T8LiXC$Obr$&amp;N</p>
+                <p class="default-paragraph">Credenziali di default per utente "Ristorante" (amministratore): ristoratore/W@SPYigXx%vQCS46</p>
+            </section>
+        </form>
+        <!-- Sezione per modale di login con successo -->
+        <section>
+            <dialog id="success-modal">
+                <p></p>
+                <button type="button">Chiudi</button>
+            </dialog>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Progetto Web Development - Riccardo Padoan</p>
+        </footer>
+    </main>
+</body>
+</html>

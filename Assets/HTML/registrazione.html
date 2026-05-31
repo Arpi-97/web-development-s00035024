@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Medati aggiuntivi -->
+    <meta name="description" content="Pagina di registrazione per Ristorante San Martino">
+    <meta name="author" content="Riccardo Padoan">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script defer src="../JS/registrazione.js"></script>
+    <title>Registrazione Ristorante San Martino</title>
+</head>
+<body>
+    <main>
+        <h1>Registrati su Ristorante San Martino</h1>
+        <!-- Form di registrazione nuovo utente -->
+        <form id="register-form">
+            <label for="username">Username</label>
+            <br>
+            <input type="text" name="username" id="username" placeholder="Inserisci il tuo nome utente" required>
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="Inserisci la tua email" required>
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <!-- Le password devono rispettare i seguenti requisiti specificati nel pattern e nelle lunghezze -->
+            <input type="password" name="password" id="password" placeholder="Inserisci la tua password" required  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,16}$" minlength="8" maxlength="16" autocomplete="new-password">
+            <br>
+            <label for="confirm-password">Conferma la password</label>
+            <br>
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="Inserisci nuovmaente la tua password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,16}$" minlength="8" maxlength="16" autocomplete="new-password">
+            <br>
+            <div class="terms-row">
+              <input type="checkbox" name="terms" id="terms" required>
+              <label for="terms">Accetto i termini e le condizioni</label>
+            </div>
+            <br>
+            <button type="submit" id="submit">Registrati</button>
+            <br>
+            <!-- Elenco dei requisiti per la composizione della password -->
+            <section>
+                <p>La password deve rispettare i seguenti requisiti:</p>
+                <ul>
+                    <li>Minimo 8 caratteri</li>
+                    <li>Massimo 16 caratteri</li>
+                    <li>Almeno una lettera maiuscola</li>
+                    <li>Almeno un numero</li>
+                    <li>Almeno un carattere speciale</li>
+                </ul>
+            </section>
+            <!-- Piccolo spazio per modale per registrazione con successo -->
+             <section>
+                <dialog id="success-modal">
+                    <p></p>
+                    <button type="button">Chiudi</button>
+                </dialog>
+             </section>
+        </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>Progetto Web Development - Riccardo Padoan</p>
+    </footer>
+</body>
+</html>

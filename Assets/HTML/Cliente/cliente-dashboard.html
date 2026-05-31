@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Medati aggiuntivi -->
+    <meta name="description" content="Dashboard del cliente per la prenotazione di un tavolo">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Riccardo Padoan">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <script src="../../JS/Cliente/cliente-dashboard.js" defer></script>
+    <title>Dashboard cliente</title>
+</head>
+<body class="cliente-dashboard-page">
+    <main>
+        <h1>Dashboard cliente</h1>
+        <!-- Navbar -->
+        <nav aria-label="Navigazione cliente">
+            <ul id="navbar-list">
+                <li><a href="./cliente-dashboard.html">Dashboard</a></li>
+                <li><a href="./cliente-profile.html">Il mio Profilo</a></li>
+                <li><a href="../../../index.html">Logout</a></li>
+            </ul>
+        </nav>
+        <!-- Sezione meteo -->
+        <section id="weather-section">
+            <h2 id="weather-title">Meteo del ristorante</h2>
+            <p id="weather-location">Lughinano, Casale sul Sile (TV)</p>
+            <section id="weather-box">
+                <p id="weather-status">Caricamento delle informazioni del meteo in corso...</p>
+            </section>
+        </section>
+        <!-- Sezione di welcome -->
+        <section id="welcome-section">
+            <h2>Benvenuto nella dashboard di prenotazione</h2>
+            <p>Da questa dashboard puoi visualizzare le tue prenotazioni attive e procedere con una nuova richiesta di prenotazione.</p>
+        </section>
+        <!-- Sezione dove l'utente può prenotare -->
+        <section id="new-booking-section">
+            <h2>Nuova prenotazione</h2>
+            <p>Se desideri riservare un tavolo, puoi iniziare una nuova prenotazione tramite il pulsante qui sotto.</p>
+            <!-- Modale di prenotazione -->
+            <dialog id="booking-dialog">
+                <form id="booking-form">
+                    <h3>Nuova prenotazione</h3>
+
+                    <label for="booking-date">Data</label>
+                    <input type="date" id="booking-date" name="booking-date" required>
+
+                    <label for="booking-time">Ora</label>
+                    <input type="time" id="booking-time" name="booking-time" required>
+
+                    <label for="booking-guests">Numero persone</label>
+                    <input type="number" id="booking-guests" name="booking-guests" min="1" max="20" required>
+
+                    <label for="extra-requests">Richieste aggiuntive</label>
+                    <input type="text" id="extra-requests" name="extra-requests" placeholder="Es: candela per cena romantica">
+
+                    <div class="dialog-actions">
+                        <button type="button" id="close-dialog-btn">Annulla</button>
+                        <button type="submit">Conferma prenotazione</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <button type="button" id="new-booking-btn">Prenota un nuovo tavolo</button>
+        </section>
+        <!-- Sezione dove l'utente puo vedere le sue prenotazioni. Alimentata da JavaScript -->
+        <section id="bookings-section">
+            <h2>Le tue prenotazioni</h2>
+            <section id="bookings-list"></section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Progetto Web Development - Riccardo Padoan</p>
+    </footer>
+</body>
+</html>

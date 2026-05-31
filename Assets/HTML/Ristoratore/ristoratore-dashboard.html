@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Medati aggiuntivi -->
+    <meta name="description" content="Dashboard del ristoratore per la conferma delle prenotazioni">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Riccardo Padoan">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <script src="../../JS/Ristoratore/ristoratore-dashboard.js" defer></script>
+    <title>Ristoratore dashboard</title>
+</head>
+<body>
+    <main>
+        <h1>Dashboard ristoratore</h1>
+        <!-- Navbar -->
+        <nav aria-label="Navigazione ristoratore">
+            <ul id="navbar-list">
+                <li><a href="./ristoratore-dashboard.html">Dashboard</a></li>
+                <li><a href="../../../index.html">Logout</a></li>
+            </ul>
+        </nav>
+        <!-- Sezione di welcome -->
+        <section id="welcome-section">
+            <h2>Benvenuto nella dashboard di verifica delleprenotazione</h2>
+            <p>Da questa dashboard puoi visualizzare le tue prenotazioni ricevute ed accettarle o meno.</p>
+        </section>
+        <!-- Sezione dove il ristoratore puo vedere le sue prenotazioni ricevute -->
+        <section id="received-booking-section">
+            <h2>Prenotazioni ricevute dai clienti</h2>
+            <p>Qui puoi visualizzare tutte le prenotazioni che i clienti hanno effettuato.</p>
+            <section id="received-booking-list"></section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Progetto Web Development - Riccardo Padoan</p>
+    </footer>
+</body>
+</html>
