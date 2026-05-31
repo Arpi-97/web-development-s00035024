@@ -31,10 +31,7 @@ The project focuses on creating a Web App for a restaturant called "San Martino"
 ## Project Structure
 
 ```
-Exam folder/
-├── Exercise/
-│   └── Web Development - Final Exam.pdf (project instructions and requested features)
-└── Project/
+Project/
     ├── Assets/
     │   ├── CSS/
     │   │   └── style.css              # CSS style used globally on all HTML files
