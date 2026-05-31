@@ -17,7 +17,7 @@ The project focuses on creating a Web App for a restaturant called "San Martino"
 ### Other features
 
 - A login page with two demo users: one for the user and one for the admin (restaurant owner);
-- A registration page, that create a new user that can next login through the portal;
+- A registration page, that creates a new user that can login through the portal;
 - A simple password security check with a HTML pattern with:
   - Minimum password lenght of 8;
   - Maximum password lenght of 16;
@@ -26,7 +26,7 @@ The project focuses on creating a Web App for a restaturant called "San Martino"
     - At least 1 lowecase letter;
     - At least 1 number;
     - At least 1 special number;
-- The use of sessionStorage through the pages that saves data in the browser. This data is used for the current logged user and the current saved bookings so only the current logged user can view its reservations and not the others;
+- The use of sessionStorage through the pages that saves data in the browser. This data is used for the current logged user, the registered user, the current saved bookings so only the current logged user can view its reservations and not the others;
 
 ## Project Structure
 
