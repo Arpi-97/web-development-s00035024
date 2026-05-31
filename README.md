@@ -51,6 +51,12 @@ PROJECT/
 └── README.md                            # Project documentation
 ```
 
+## How to run it locally with Five Server
+
+1. Download the whole project locally;
+2. Open it with VS Code and position yourself with the folder "project" (like in the schema above) as it's root folder;
+3. Open index.html with Five Server and extension and test it using the below flows.
+
 ## User flow
 
 ### Login in and registering
