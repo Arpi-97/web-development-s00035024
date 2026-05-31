@@ -1,4 +1,4 @@
-# Web Development Project - Riccardo Padoan
+# Web Development Project - Riccardo Padoan (s00035024)
 
 The project focuses on creating a Web App for a restaturant called "San Martino" in which users, through a login page, can create new reservations and check their statuses actively.
 
